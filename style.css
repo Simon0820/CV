@@ -1,3 +1,137 @@
 body{
-padding: 0px;
+   font-family:'Courier New', Courier, monospace;
+   margin: 0 auto;
+   
+   /* font-size: 19px; */
+}
+
+button{
+    color: black;
+    background-color: transparent;
+    border: solid rgb(95, 95, 95) 1px;
+    border-radius: 7px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: lighter;
+    cursor: pointer;
+    box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.cv{
+    display: flex;
+    flex-direction: column;
+}
+
+.profile{
+    margin-top: 150px;
+    width: 100%;
+    height: 150px;
+    z-index: 10;
+    text-align: center;
+}
+
+.profile-info{
+    width: 100%;
+    height: 500px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.profile-info h1{
+    margin-top: 50px;
+    font: 2.5em monospace;
+}
+
+.profile-info p{
+    font-size: 25px;
+}
+
+#profile-info-buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+#profile-1, #profile-2, #profile-3{
+    margin-bottom: 10px;
+    width: 75%;
+}
+
+/* #linkedin-pic{
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+} */
+
+#profilePic{
+    width: 200px;
+    height: 200px;
+    border-radius: 15%;
+    box-shadow: 8px 8px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/* 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+
+.background::before{
+    position: fixed;
+    content: "";
+    z-index: -10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: URL("assets/bild.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    filter: blur(8px);
+}
+
+.noselect{
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.footer{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 60px;
+    text-align: center;
+}
+
+@media only screen and (min-width: 700px) {
+    .cv{
+        flex-direction: row;
+    }
+
+    .profile{
+        margin-top: 160px;
+    }
+
+    #profilePic{
+        width: 450px;
+        height: 500px;
+        object-fit: cover;
+        border-radius: 5%;
+    }
+
+    .profile-info{
+        height: 100vh;
+    }
+
+    .profile-info h1{
+        margin-top: 160px;
+    }
+
+    .footer{
+        margin-top: 0;
+        width: 50%;
+    }
 }
